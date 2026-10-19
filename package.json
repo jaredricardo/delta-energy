@@ -4,8 +4,7 @@
   "private": true,
   "description": "Shopify theme for Delta Energy",
   "scripts": {
-    "dev": "shopify theme dev --store=bfac5a-e3.myshopify.com",
-    "push": "shopify theme push --store=bfac5a-e3.myshopify.com",
+    "dev": "shopify theme dev --store=bfac5a-e3.myshopify.com --nodelete",
     "pull": "shopify theme pull --development --nodelete",
     "check": "shopify theme check"
   },
