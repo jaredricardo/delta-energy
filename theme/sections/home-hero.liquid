@@ -1,0 +1,159 @@
+{{ 'home-shared.css' | asset_url | stylesheet_tag }}
+{{ 'section-home-hero.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'section-home-hero.js' | asset_url }}" defer="defer"></script>
+
+{%- comment -%}
+  Pulled from the Variant F mock's hero (#stage / #mtop). The hero's own
+  nav/logo/cart row was dropped since sections/header.liquid now owns that
+  chrome; everything else (headline, flavor art, chips, CTA) is unchanged.
+{%- endcomment -%}
+
+<div class="de-home-section__desktop">
+  <div class="de-comp de-comp--bleed">
+    <div class="de-comp__inner hero-comp">
+  <!-- ===== HERO: direction 1 ===== -->
+  <div class="stage prefocus" id="stage" data-world="neutral">
+    <div class="abs bg"></div>
+    <div class="abs grain hero-1" ></div>
+    <div class="abs tint cherry"></div>
+    <div class="abs tint pine"></div>
+    <div class="abs divider"></div>
+    <!-- can glows sit behind the header (logo, nav, Shop) so they never wash over it -->
+    <div class="par hero-2" data-depth="-10" >
+      <div class="gw hero-3" id="gw-cherry" >
+        <div class="glow hero-4" ></div>
+        <div class="glow hot hero-5" ></div>
+      </div>
+      <div class="gw hero-6" id="gw-lime" >
+        <div class="glow hero-7" ></div>
+      </div>
+      <div class="gw hero-8" id="gw-pine" >
+        <div class="glow hero-9" ></div>
+        <div class="glow hot hero-10" ></div>
+      </div>
+    </div>
+    <h1 class="abs headline">Naturally higher energy</h1>
+    <div class="abs intro">
+      <p>Delta Energy’s naturally derived plant formula offers clean, consistent energy that boosts your mood without weighing you down.</p>
+      <a class="cta hot-ui" href="#what" data-jump="what">What is Delta Energy?
+        <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#302C4B"/><path d="M12 12l8 8M20 13v7h-7" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+
+
+    <ul class="abs chips">
+      <li>+ 200 MG Caffeine</li><li>+ Zero Sugar</li><li>+ Gluten Free</li><li>+ Low Calorie</li><li>+ Zero 🍃</li><li>+ Functional Ingredients</li>
+    </ul>
+
+    <div class="par hero-16" data-depth="46" ><div class="st" data-fruit="mango">
+      <div class="fl echo-fl hero-17" ><div class="sw"><img class="hero-18" src="{{ 'mango.webp' | asset_url }}" alt=""  loading="lazy"></div></div>
+      <div class="fl main hero-19" ><div class="sw"><img class="full" src="{{ 'mango.webp' | asset_url }}" alt="" loading="lazy"><img class="soft" src="{{ 'soft_mango.webp' | asset_url }}" alt="" loading="lazy"></div></div>
+    </div></div>
+    <div class="par hero-20" data-depth="24" ><div class="st" data-fruit="pine">
+      <div class="fl echo-fl hero-21" ><div class="sw"><img class="hero-22" src="{{ 'pineapple.webp' | asset_url }}" alt=""  loading="lazy"></div></div>
+      <div class="fl main hero-23" ><div class="sw"><img class="full" src="{{ 'pineapple.webp' | asset_url }}" alt="" loading="lazy"><img class="soft" src="{{ 'soft_pineapple.webp' | asset_url }}" alt="" loading="lazy"></div></div>
+    </div></div>
+    <div class="par hero-24" data-depth="30" ><div class="st" data-fruit="lime">
+      <div class="fl echo-fl hero-25" ><div class="sw"><img class="hero-26" src="{{ 'lime.webp' | asset_url }}" alt=""  loading="lazy"></div></div>
+      <div class="fl main hero-27" ><div class="sw"><img class="full" src="{{ 'lime.webp' | asset_url }}" alt="" loading="lazy"><img class="soft" src="{{ 'soft_lime.webp' | asset_url }}" alt="" loading="lazy"></div></div>
+    </div></div>
+
+    <div class="par par-shadow hero-28" data-depth="8" ><div class="abs can-shadow"></div></div>
+    <img class="abs cans-mul" data-depth="8" src="{{ 'cans_multiply.webp' | asset_url }}" alt="" loading="lazy">
+    <div class="par par-cans hero-29" data-depth="8" >
+      <img class="abs cans full" src="{{ 'cans.webp' | asset_url }}" alt="Cherry Limeade and Pineapple Mango cans" fetchpriority="high" loading="lazy">
+      <img class="abs cans-soft" src="{{ 'soft_cans.webp' | asset_url }}" alt="" loading="lazy">
+    </div>
+
+    <div class="par hero-30" data-depth="40" ><div class="st" data-fruit="cherry">
+      <div class="fl echo-fl hero-31" ><div class="sw"><img class="hero-32" src="{{ 'cherry.webp' | asset_url }}" alt=""  loading="lazy"></div></div>
+      <div class="fl main hero-33" ><div class="sw"><img class="full" src="{{ 'cherry.webp' | asset_url }}" alt="" loading="lazy"><img class="soft" src="{{ 'soft_cherry.webp' | asset_url }}" alt="" loading="lazy"></div></div>
+    </div></div>
+
+    <div class="par hero-34" data-depth="8" >
+      <a class="abs tag hot-ui hero-35"  href="#shop" data-jump="shop" data-flavor-pick="cherry">Add <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15.5" fill="#C3DF80" stroke="#302952" stroke-opacity=".25"/><path d="M16 11.5v9M11.5 16h9" stroke="#302952" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+      <a class="abs tag hot-ui hero-36"  href="#shop" data-jump="shop" data-flavor-pick="pine">Add <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15.5" fill="#C3DF80" stroke="#302952" stroke-opacity=".25"/><path d="M16 11.5v9M11.5 16h9" stroke="#302952" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+      <div class="abs flabel cherry">Cherry Limeade</div>
+      <div class="abs flabel pine">Pineapple Mango</div>
+    </div>
+  </div>
+
+
+    </div>
+  </div>
+</div>
+
+<div class="de-home-section__mobile">
+  <section class="ms ms-hero prefocus" id="mtop" data-world="neutral" aria-label="Delta Energy">
+    <div class="mfull mbg"></div>
+    <div class="mfull grain mgrain"></div>
+    <div class="mfull mtint cherry"></div>
+    <div class="mfull mtint pine"></div>
+    <div class="mc">
+      <h1 class="ma mh1 lines fx-lines hero-m-1" data-fx="reveal" >
+        <span class="ln"><span class="hero-m-2" >Naturally</span></span><span class="ln"><span class="hero-m-3" >higher energy</span></span>
+      </h1>
+      <p class="ma mb15 mctr fx-rise hero-m-4" data-fx="reveal" >Delta Energy’s naturally derived plant formula offers clean, consistent energy that boosts your mood without weighing you down.</p>
+      <a class="mcta fx-rise hot-ui hero-m-5" data-fx="reveal"  href="#mwhat" data-mjump="mwhat">What is Delta Energy?
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#302C4B"/><path d="M12 12l8 8M20 13v7h-7" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <div class="mart" id="mart"><div class="mart-in">
+        <div class="mpar" data-mdepth="-3">
+          <div class="mgw hero-m-6" id="mgw-cherry" >
+            <div class="glow hero-m-7" ></div>
+            <div class="glow hot hero-m-8" ></div>
+          </div>
+          <div class="mgw hero-m-9" id="mgw-lime" ><div class="glow hero-m-10" ></div></div>
+          <div class="mgw hero-m-11" id="mgw-pine" >
+            <div class="glow hero-m-12" ></div>
+            <div class="glow hot hero-m-13" ></div>
+          </div>
+        </div>
+        <div class="mpar" data-mdepth="6"><div class="st hero-m-14" data-fruit="pine" >
+          <div class="fl echo-fl hero-m-15" ><div class="sw"><img class="hero-m-16" src="{{ 'm_h_pine.webp' | asset_url }}" alt="" loading="lazy" ></div></div>
+          <div class="fl main hero-m-17" ><div class="sw"><img class="full" src="{{ 'm_h_pine.webp' | asset_url }}" alt="" loading="lazy"><img class="soft" src="{{ 'm_soft_pine.webp' | asset_url }}" alt="" loading="lazy"></div></div>
+        </div></div>
+        <div class="mpar" data-mdepth="8"><div class="st hero-m-18" data-fruit="lime" >
+          <div class="fl echo-fl hero-m-19" ><div class="sw"><img class="hero-m-20" src="{{ 'm_h_lime.webp' | asset_url }}" alt="" loading="lazy" ></div></div>
+          <div class="fl main hero-m-21" ><div class="sw"><img class="full" src="{{ 'm_h_lime.webp' | asset_url }}" alt="" loading="lazy"><img class="soft" src="{{ 'm_soft_lime.webp' | asset_url }}" alt="" loading="lazy"></div></div>
+        </div></div>
+        <div class="mpar" data-mdepth="3"><div class="mshadow"></div></div>
+        <img class="mcans-mul" data-mdepth="3" src="{{ 'm_cans_mul.webp' | asset_url }}" alt="" loading="lazy">
+        <div class="mpar mpar-cans" data-mdepth="3">
+          <img class="mcans full" src="{{ 'm_cans.webp' | asset_url }}" alt="Cherry Limeade and Pineapple Mango cans" loading="lazy">
+          <img class="mcans-soft" src="{{ 'm_soft_cans.webp' | asset_url }}" alt="" loading="lazy">
+        </div>
+        <div class="mpar" data-mdepth="12"><div class="st hero-m-22" data-fruit="cherry" >
+          <div class="fl echo-fl hero-m-23" ><div class="sw"><img class="hero-m-24" src="{{ 'm_h_cherry.webp' | asset_url }}" alt="" loading="lazy" ></div></div>
+          <div class="fl main hero-m-25" ><div class="sw"><img class="full" src="{{ 'm_h_cherry.webp' | asset_url }}" alt="" loading="lazy"><img class="soft" src="{{ 'm_soft_cherry.webp' | asset_url }}" alt="" loading="lazy"></div></div>
+        </div></div>
+        <div class="mpar" data-mdepth="14"><div class="st hero-m-26" data-fruit="mango" >
+          <div class="fl echo-fl hero-m-27" ><div class="sw"><img class="hero-m-28" src="{{ 'm_h_mango.webp' | asset_url }}" alt="" loading="lazy" ></div></div>
+          <div class="fl main hero-m-29" ><div class="sw"><img class="full" src="{{ 'm_h_mango.webp' | asset_url }}" alt="" loading="lazy"><img class="soft" src="{{ 'm_soft_mango.webp' | asset_url }}" alt="" loading="lazy"></div></div>
+        </div></div>
+      </div></div>
+
+      <a class="mtag big hot-ui fx-pop hero-m-30" data-fx="reveal"  href="#mshop" data-mjump="mshop" data-mpick="cherry" aria-label="Add Cherry Limeade">Add <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15.5" fill="#C3DF80" stroke="#302952" stroke-opacity=".25"/><path d="M16 11.5v9M11.5 16h9" stroke="#302952" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+      <a class="mtag big hot-ui fx-pop hero-m-31" data-fx="reveal"  href="#mshop" data-mjump="mshop" data-mpick="pine" aria-label="Add Pineapple Mango">Add <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15.5" fill="#C3DF80" stroke="#302952" stroke-opacity=".25"/><path d="M16 11.5v9M11.5 16h9" stroke="#302952" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+      <div class="mflabel cherry">Cherry Limeade</div>
+      <div class="mflabel pine">Pineapple Mango</div>
+
+      <div class="mchip fx-rise hero-m-32" data-fx="reveal" >+ 200 MG Caffeine</div>
+      <div class="mchip fx-rise hero-m-33" data-fx="reveal" >+ Zero Sugar</div>
+      <div class="mchip fx-rise hero-m-34" data-fx="reveal" >+ Gluten Free</div>
+      <div class="mchip fx-rise hero-m-35" data-fx="reveal" >+ Low Calorie</div>
+      <div class="mchip fx-rise hero-m-36" data-fx="reveal" >+ Zero 🍃</div>
+      <div class="mchip fx-rise hero-m-37" data-fx="reveal" >+ Functional Ingredients</div>
+      <div class="mhint hero-m-38" >Tap a can to switch flavors</div>
+    </div>
+  </section>
+
+</div>
+
+{% schema %}
+{
+  "name": "Home — Hero",
+  "settings": []
+}
+{% endschema %}

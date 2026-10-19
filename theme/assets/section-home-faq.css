@@ -1,0 +1,68 @@
+/* ---------- FAQ ---------- */
+.sec-faq{overflow:hidden}
+.faq-bg{left:0;top:0;width:1920px;height:778px;background:linear-gradient(180deg,#FAFAF7,#DCE0E6)}
+.qcol{position:absolute;width:574px;display:flex;flex-direction:column;gap:12px}
+.qa{box-sizing:border-box;border:1px solid var(--de-hairline);border-radius:15px;background:var(--de-paper);padding:24px 24px 24px 30px;transition:box-shadow .3s ease}
+.qa:hover{box-shadow:0 10px 26px -18px rgb(48 44 75 / .45)}
+.qa-q{display:flex;align-items:flex-start;justify-content:space-between;gap:23px;width:100%;padding:0;border:0;background:none;text-align:left;cursor:pointer;font:700 18px/1.2 var(--de-font-display);letter-spacing:-.72px;color:var(--de-purple-2);min-height:24px}
+.qa-q span{padding-top:1px}
+.qa-ico{flex:none;width:24px;height:24px;border-radius:50%;background:var(--de-lime);display:grid;place-items:center;transition:transform .45s var(--de-spring),opacity .3s ease}
+.qa.open .qa-ico{transform:rotate(45deg);opacity:.5}
+.qa-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s var(--de-ease)}
+.qa.open .qa-a{grid-template-rows:1fr}
+.qa-a>div{overflow:hidden}
+.qa-a p{margin:0;padding-top:16px;width:477px;font:500 16px/1.75 var(--de-font-display);letter-spacing:-.16px;color:var(--de-ink)}
+
+
+.faq-d-1{height:778px}
+.faq-d-2{left:1174px;top:578px;width:303.5px;height:269px;--dl:-4.4s}
+.faq-d-3{left:-80px;top:444.5px;width:337px;height:376px;--dl:-1.5s}
+.faq-d-4{left:1670.46px;top:116.67px;width:324.67px;height:352px;--dl:-6.0s}
+.faq-d-5{left:80px;top:100px}
+.faq-d-6{left:80px;top:160px;width:425px;--rd:80ms}
+.faq-d-7{--i:0}
+.faq-d-8{--i:1}
+.faq-d-9{left:80px;top:308px;width:425px;--rd:280ms}
+.faq-d-10{left:673px;top:160px}
+.faq-d-11{--ry:24px;--rd:160ms}
+.faq-d-12{--ry:24px;--rd:230ms}
+.faq-d-13{--ry:24px;--rd:300ms}
+.faq-d-14{--ry:24px;--rd:370ms}
+.faq-d-15{left:1267px;top:160px}
+.faq-d-16{--ry:24px;--rd:200ms}
+.faq-d-17{--ry:24px;--rd:270ms}
+.faq-d-18{--ry:24px;--rd:340ms}
+.faq-d-19{--ry:24px;--rd:410ms}
+/* ---------- FAQ ---------- */
+.ms-faq{z-index:2}
+.ms-faq>.mc{height:auto;padding:calc(259*var(--u)) 0 calc(72*var(--u))}
+.ms-faq .mbg{inset:0;background:linear-gradient(180deg,#faf9f7 0%,#f6f6f4 55%,#e4e8ec 88%,#d4dae2 100%)}
+.ms-faq .mgrain{inset:0}
+.mqcol{position:relative;width:calc(358*var(--u));margin-left:calc(16*var(--u));display:flex;flex-direction:column;gap:calc(12*var(--u));z-index:2}
+.qa{box-sizing:border-box;border:1px solid var(--de-hairline);border-radius:calc(10*var(--u));background:var(--de-paper);padding:calc(15*var(--u)) calc(10*var(--u)) calc(15*var(--u)) calc(14*var(--u))}
+.qa-q{gap:calc(16*var(--u));font:800 calc(16*var(--u))/1.2 var(--de-font-display);letter-spacing:calc(-.64*var(--u));color:var(--de-purple-2);min-height:calc(24*var(--u))}
+.qa-ico{width:calc(24*var(--u));height:calc(24*var(--u))}
+.qa-ico svg{width:calc(9*var(--u));height:calc(9*var(--u))}
+.qa-ico path{transition:stroke .3s ease,transform .45s var(--de-ease);transform-origin:50% 50%}
+.qa.open .qa-ico{transform:rotate(180deg);opacity:1;background:var(--de-purple)}
+.qa.open .qa-ico path{stroke:#fff}
+.qa.open .qa-ico .v{transform:scaleY(0)}
+.qa-a p{padding-top:calc(8*var(--u));width:calc(293*var(--u));font:500 calc(14*var(--u))/1.75 var(--de-font-display);letter-spacing:calc(-.14*var(--u))}
+.ms-faq .mbot{position:absolute;bottom:0;left:0;width:calc(390*var(--u));height:0}
+
+.faq-m-1{left:calc(82.31*var(--u));top:calc(-45.38*var(--u));width:calc(126.92*var(--u));height:calc(113.15*var(--u));--dl:-2.6s;z-index:3}
+.faq-m-2{left:calc(302.74*var(--u));top:calc(30.57*var(--u));width:calc(110*var(--u));height:calc(116.92*var(--u));--dl:-6.0s}
+.faq-m-3{left:calc(333.75*var(--u));bottom:calc(150.87*var(--u));width:calc(147.41*var(--u));height:calc(127.5*var(--u));--dl:-4.4s}
+.faq-m-4{left:calc(-53.03*var(--u));bottom:calc(-9.94*var(--u));width:calc(152.55*var(--u));height:calc(129.57*var(--u));--dl:-1.5s}
+.faq-m-5{left:calc(16*var(--u));top:calc(48*var(--u))}
+.faq-m-6{left:calc(16*var(--u));top:calc(89*var(--u));width:calc(321*var(--u));--rd:80ms}
+.faq-m-7{--i:0}
+.faq-m-8{--i:1}
+.faq-m-9{left:calc(16*var(--u));top:calc(177*var(--u));width:calc(321*var(--u));--rd:280ms}
+.faq-m-10{--ry:20px;--rd:120ms}
+.faq-m-11{--ry:20px;--rd:180ms}
+.faq-m-12{--ry:20px;--rd:240ms}
+.faq-m-13{--ry:20px;--rd:300ms}
+.faq-m-14{--ry:20px;--rd:360ms}
+.faq-m-15{--ry:20px;--rd:420ms}
+.faq-comp{height:778px}

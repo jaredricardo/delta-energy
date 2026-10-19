@@ -1,0 +1,63 @@
+/* Delta Energy — footer section styles */
+.de-footer{background:var(--de-footer);color:var(--de-white);padding:48px 0 24px}
+
+.de-footer__grid{
+  display:grid;gap:40px;
+  grid-template-columns:1fr;
+}
+.de-footer__intro img{margin-bottom:20px}
+.de-footer__heading{
+  font-family:var(--de-font-display);font-weight:700;font-size:22px;line-height:1.2;letter-spacing:-.44px;
+  color:var(--de-white);margin:0 0 20px;
+}
+
+.de-footer__email{position:relative;max-width:358px}
+.de-footer__email input{
+  width:100%;height:56px;box-sizing:border-box;border:1px solid transparent;border-radius:var(--de-radius-pill);
+  background:rgb(255 255 255 / .1);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+  padding:0 60px 0 25px;font-family:var(--de-font-display);font-weight:500;font-size:16px;color:var(--de-white);
+  transition:border-color .3s ease,background .3s ease;
+}
+.de-footer__email input::placeholder{color:var(--de-white);opacity:1}
+.de-footer__email input:focus{border-color:rgb(195 223 128 / .9);background:rgb(255 255 255 / .14)}
+.de-footer__email button{
+  position:absolute;top:8px;right:8px;width:40px;height:40px;border-radius:50%;background:var(--de-white);
+  display:grid;place-items:center;transition:transform .35s var(--de-spring);
+}
+.de-footer__email button:active{transform:scale(.9)}
+.de-footer__email-note{
+  display:block;margin-top:10px;font-size:12px;color:var(--de-lime);opacity:0;transition:opacity .3s ease;
+}
+.de-footer__email.is-sent .de-footer__email-note{opacity:1}
+
+.de-footer__label{
+  display:block;margin-bottom:16px;font-family:var(--de-font-mono);font-size:12px;letter-spacing:-.24px;
+  text-transform:uppercase;color:rgb(255 255 255 / .5);
+}
+.de-footer__col ul{display:flex;flex-direction:column;gap:12px}
+.de-footer__col a{
+  font-weight:500;font-size:16px;letter-spacing:-.4px;color:var(--de-white);
+  background:linear-gradient(var(--de-lime),var(--de-lime)) 0 100%/0 2px no-repeat;
+  transition:background-size .35s var(--de-ease);
+}
+.de-footer__col a:hover{background-size:100% 2px}
+
+.de-footer__social ul{flex-direction:row;gap:12px}
+.de-footer__social img{width:42px;height:42px;border-radius:50%;transition:transform .35s var(--de-spring)}
+.de-footer__social a:active img{transform:translateY(-4px)}
+
+.de-footer__legal{
+  margin-top:40px;padding-top:20px;border-top:1px solid rgb(255 255 255 / .15);
+  display:flex;flex-direction:column;gap:6px;
+}
+.de-footer__legal p{
+  margin:0;font-size:12px;letter-spacing:-.24px;color:rgb(255 255 255 / .85);
+}
+
+@media (min-width:1100px){
+  .de-footer{padding:80px 0 32px}
+  .de-footer__grid{grid-template-columns:425px 1fr 1fr 1fr}
+  .de-footer__heading{font-size:26px;letter-spacing:-.52px}
+  .de-footer__col a{font-size:18px}
+  .de-footer__legal{flex-direction:row;justify-content:space-between;margin-top:64px}
+}

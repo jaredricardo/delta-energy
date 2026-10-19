@@ -1,0 +1,96 @@
+{{ 'section-header.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'section-header.js' | asset_url }}" defer="defer"></script>
+
+<header class="de-header" id="SiteHeader" data-section-id="{{ section.id }}" data-section-type="header">
+  <div class="de-header__bar de-container">
+    <a href="{{ routes.root_url }}" class="de-header__logo" aria-label="{{ shop.name }} — home">
+      {%- if section.settings.logo != blank -%}
+        <img
+          src="{{ section.settings.logo | image_url: width: 164 }}"
+          alt="{{ shop.name }}"
+          width="164"
+          height="56"
+          loading="eager"
+          fetchpriority="high"
+        >
+      {%- else -%}
+        <span class="de-header__logo-text">{{ shop.name }}</span>
+      {%- endif -%}
+    </a>
+
+    <nav class="de-header__nav" aria-label="Main menu">
+      <ul class="de-header__nav-list">
+        {%- for link in section.settings.main_menu.links -%}
+          <li>
+            <a
+              href="{{ link.url }}"
+              {% if link.links != blank %}aria-haspopup="true"{% endif %}
+              {% if link.active %}aria-current="page"{% endif %}
+            >{{ link.title }}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+
+    <div class="de-header__actions">
+      <a href="{{ routes.search_url }}" class="de-header__icon-btn" aria-label="Search">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
+          <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M14.2 14.2L18 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </a>
+
+      <a href="{{ routes.account_url }}" class="de-header__icon-btn" aria-label="Account">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
+          <circle cx="10" cy="6.5" r="3.5" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M3 17c1.2-3.6 4-5.4 7-5.4s5.8 1.8 7 5.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </a>
+
+      <button
+        type="button"
+        class="de-header__icon-btn de-header__cart-btn"
+        data-cart-toggle
+        aria-haspopup="dialog"
+        aria-controls="CartDrawer"
+        aria-label="Open cart, {{ cart.item_count }} item{% if cart.item_count != 1 %}s{% endif %}"
+      >
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true" focusable="false">
+          <path d="M3 6h16l-1.4 10.2a2 2 0 0 1-2 1.8H6.4a2 2 0 0 1-2-1.8L3 6Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M7 6a4 4 0 0 1 8 0" stroke="currentColor" stroke-width="1.6"/>
+        </svg>
+        <span class="de-header__cart-count" data-cart-count>{{ cart.item_count }}</span>
+      </button>
+
+      <button
+        type="button"
+        class="de-header__burger"
+        data-mobile-nav-toggle
+        aria-haspopup="dialog"
+        aria-controls="MobileNav"
+        aria-label="Open menu"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "link_list",
+      "id": "main_menu",
+      "label": "Main menu",
+      "default": "main-menu"
+    }
+  ]
+}
+{% endschema %}

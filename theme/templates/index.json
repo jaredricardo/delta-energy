@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "hero": { "type": "home-hero" },
+    "what": { "type": "home-what" },
+    "ingredients": { "type": "home-ingredients" },
+    "photo": { "type": "home-photo" },
+    "shop": { "type": "home-shop" },
+    "marquee": { "type": "home-marquee" },
+    "difference": { "type": "home-difference" },
+    "faq": { "type": "home-faq" }
+  },
+  "order": ["hero", "what", "ingredients", "photo", "shop", "marquee", "difference", "faq"]
+}

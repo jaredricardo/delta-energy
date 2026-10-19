@@ -1,0 +1,36 @@
+/* Delta Energy — mobile nav aside */
+.de-mobile-nav{
+  position:fixed;top:0;right:0;bottom:0;z-index:95;
+  width:min(360px, 86vw);
+  background:var(--de-paper);
+  box-shadow:-10px 0 40px rgb(34 29 57 / .18);
+  transform:translateX(100%);
+  transition:transform var(--de-duration) var(--de-ease);
+  display:flex;flex-direction:column;
+  overflow-y:auto;
+}
+.de-mobile-nav.is-open{transform:translateX(0)}
+
+.de-mobile-nav__head{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:20px;border-bottom:1px solid var(--de-hairline);
+}
+.de-mobile-nav__title{font-weight:700;font-size:18px;color:var(--de-purple)}
+.de-mobile-nav__close{
+  width:36px;height:36px;display:flex;align-items:center;justify-content:center;
+  border-radius:50%;color:var(--de-purple);transition:background var(--de-duration-fast) ease;
+}
+.de-mobile-nav__close:hover{background:var(--de-tile)}
+
+.de-mobile-nav__nav{padding:12px 8px;flex:1}
+.de-mobile-nav__list li a{
+  display:block;padding:14px 12px;font-weight:700;font-size:20px;letter-spacing:-.5px;
+  color:var(--de-purple);border-bottom:1px solid var(--de-hairline);
+}
+
+.de-mobile-nav__foot{padding:20px;border-top:1px solid var(--de-hairline)}
+.de-mobile-nav__account-link{font-weight:700;font-size:15px;color:var(--de-purple-2)}
+
+@media (min-width:1100px){
+  .de-mobile-nav{display:none}
+}

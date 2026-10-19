@@ -1,0 +1,49 @@
+/* Delta Energy — cart aside */
+.de-cart-drawer{
+  position:fixed;top:0;right:0;bottom:0;z-index:95;
+  width:min(420px, 92vw);
+  background:var(--de-paper);
+  box-shadow:-10px 0 40px rgb(34 29 57 / .18);
+  transform:translateX(100%);
+  transition:transform var(--de-duration) var(--de-ease);
+  display:flex;flex-direction:column;
+}
+.de-cart-drawer.is-open{transform:translateX(0)}
+
+.de-cart-drawer__head{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:20px;border-bottom:1px solid var(--de-hairline);
+}
+.de-cart-drawer__title{margin:0;font-size:20px}
+.de-cart-drawer__close{
+  width:36px;height:36px;display:flex;align-items:center;justify-content:center;
+  border-radius:50%;color:var(--de-purple);transition:background var(--de-duration-fast) ease;
+}
+.de-cart-drawer__close:hover{background:var(--de-tile)}
+
+.de-cart-drawer__body{flex:1;overflow-y:auto;padding:20px}
+.de-cart-drawer__empty{text-align:center;margin-bottom:20px}
+
+.de-cart-drawer__items{display:flex;flex-direction:column;gap:18px}
+.de-cart-drawer__item{
+  display:grid;grid-template-columns:80px 1fr auto;gap:12px;align-items:start;
+  position:relative;padding-bottom:18px;border-bottom:1px solid var(--de-hairline);
+}
+.de-cart-drawer__item-image img{border-radius:var(--de-radius-sm);object-fit:cover}
+.de-cart-drawer__item-info{display:flex;flex-direction:column;gap:4px}
+.de-cart-drawer__item-title{font-size:15px;font-weight:700;color:var(--de-purple)}
+.de-cart-drawer__item-price{font-family:var(--de-font-mono);font-size:13px;color:var(--de-price)}
+.de-cart-drawer__item-qty{grid-column:2;margin-top:4px}
+.de-cart-drawer__item-qty input{
+  width:64px;padding:6px 8px;border:1px solid var(--de-hairline);border-radius:var(--de-radius-sm);
+}
+.de-cart-drawer__item-remove{
+  position:absolute;top:0;right:0;width:28px;height:28px;
+  display:flex;align-items:center;justify-content:center;color:var(--de-muted);
+}
+
+.de-cart-drawer__foot{padding:20px;border-top:1px solid var(--de-hairline)}
+.de-cart-drawer__subtotal{
+  display:flex;justify-content:space-between;font-weight:700;font-size:16px;margin-bottom:16px;
+}
+.de-cart-drawer__checkout{width:100%}

@@ -1,0 +1,8 @@
+/* ---------- lifestyle photo ---------- */
+.photo{left:0;top:0;width:1920px;height:878px;overflow:hidden}
+.photo img{position:absolute;left:0;top:-220px;width:1920px;height:1318px;max-width:none}
+.photo-comp{height:878px}
+
+/* ---------- lifestyle photo (mobile) ---------- */
+.ms-photo{height:calc(360*var(--u));overflow:hidden;z-index:1}
+.ms-photo img{position:absolute;left:0;top:calc(-60*var(--u));width:100%;height:calc(100% + calc(120*var(--u)));object-fit:cover;object-position:50% 50%}

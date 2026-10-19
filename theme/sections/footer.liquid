@@ -1,0 +1,83 @@
+{{ 'section-footer.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'section-footer.js' | asset_url }}" defer="defer"></script>
+
+<footer class="de-footer" data-section-id="{{ section.id }}" data-section-type="footer">
+  <div class="de-container de-footer__grid">
+    <div class="de-footer__intro">
+      {%- if section.settings.footer_art != blank -%}
+        <img src="{{ section.settings.footer_art | image_url: width: 128 }}" alt="" width="64" height="62" loading="lazy">
+      {%- endif -%}
+      <p class="de-footer__heading">{{ section.settings.heading | default: 'Get good vibes sent to your inbox' }}</p>
+
+      <form class="de-footer__email" action="#" data-footer-email novalidate>
+        <label class="visually-hidden" for="FooterEmail">Email address</label>
+        <input id="FooterEmail" type="email" placeholder="Enter email" aria-label="Email address" autocomplete="email" required>
+        <button type="submit" aria-label="Subscribe">
+          <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" focusable="false">
+            <path d="M2 7h10M8 3l4 4-4 4" fill="none" stroke="#302952" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <span class="de-footer__email-note" data-footer-email-note>Thanks — you're on the list.</span>
+      </form>
+    </div>
+
+    <nav class="de-footer__col" aria-label="Info">
+      <span class="de-footer__label">Info</span>
+      <ul>
+        <li><a href="{{ section.settings.what_url | default: '#what' }}">What is Delta Energy?</a></li>
+        <li><a href="{{ section.settings.how_url | default: '#how' }}">How it Works</a></li>
+        <li><a href="{{ section.settings.faq_url | default: '#faq' }}">FAQs</a></li>
+      </ul>
+    </nav>
+
+    <nav class="de-footer__col" aria-label="Shop">
+      <span class="de-footer__label">Shop</span>
+      <ul>
+        <li><a href="{{ section.settings.shop_url | default: '#shop' }}">Shop Cherry Limeade</a></li>
+        <li><a href="{{ section.settings.shop_url | default: '#shop' }}">Shop Pineapple Mango</a></li>
+      </ul>
+    </nav>
+
+    <div class="de-footer__col de-footer__social">
+      <span class="de-footer__label">Follow Us</span>
+      <ul>
+        {%- if section.settings.instagram_url != blank -%}
+          <li><a href="{{ section.settings.instagram_url }}" aria-label="Instagram"><img src="{{ 'soc_instagram.webp' | asset_url }}" alt="" width="42" height="42" loading="lazy"></a></li>
+        {%- endif -%}
+        {%- if section.settings.tiktok_url != blank -%}
+          <li><a href="{{ section.settings.tiktok_url }}" aria-label="TikTok"><img src="{{ 'soc_tiktok.webp' | asset_url }}" alt="" width="42" height="42" loading="lazy"></a></li>
+        {%- endif -%}
+        {%- if section.settings.facebook_url != blank -%}
+          <li><a href="{{ section.settings.facebook_url }}" aria-label="Facebook"><img src="{{ 'soc_facebook.webp' | asset_url }}" alt="" width="42" height="42" loading="lazy"></a></li>
+        {%- endif -%}
+        {%- if section.settings.x_url != blank -%}
+          <li><a href="{{ section.settings.x_url }}" aria-label="X"><img src="{{ 'soc_x.webp' | asset_url }}" alt="" width="42" height="42" loading="lazy"></a></li>
+        {%- endif -%}
+      </ul>
+    </div>
+  </div>
+
+  <div class="de-container de-footer__legal">
+    <p>Copyright &copy; {{ 'now' | date: '%Y' }} Delta Beverages, Inc.</p>
+    <p>drinkdelta.com</p>
+    <p>GRAS-recognized ingredients, meeting FDA safety standards for consumer use.</p>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    { "type": "image_picker", "id": "footer_art", "label": "Footer artwork" },
+    { "type": "text", "id": "heading", "label": "Newsletter heading", "default": "Get good vibes sent to your inbox" },
+    { "type": "url", "id": "what_url", "label": "\"What is Delta Energy\" link" },
+    { "type": "url", "id": "how_url", "label": "\"How it works\" link" },
+    { "type": "url", "id": "faq_url", "label": "\"FAQs\" link" },
+    { "type": "url", "id": "shop_url", "label": "Shop link" },
+    { "type": "url", "id": "instagram_url", "label": "Instagram URL" },
+    { "type": "url", "id": "tiktok_url", "label": "TikTok URL" },
+    { "type": "url", "id": "facebook_url", "label": "Facebook URL" },
+    { "type": "url", "id": "x_url", "label": "X URL" }
+  ]
+}
+{% endschema %}

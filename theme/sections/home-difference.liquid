@@ -1,0 +1,119 @@
+{{ 'home-shared.css' | asset_url | stylesheet_tag }}
+{{ 'section-home-difference.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'section-home-difference.js' | asset_url }}" defer="defer"></script>
+
+{%- comment -%}
+  Pulled from the mock's comparison-table section (#difference). Desktop
+  shows all four competitor columns at once; mobile uses tabs to swap a
+  single competitor column, ported from the mock's mSetComp().
+{%- endcomment -%}
+
+<div class="de-home-section__desktop">
+  <div class="de-comp">
+    <div class="de-comp__inner difference-comp">
+  <section class="sec difference-d-1" id="difference"  aria-label="The delta difference">
+    <div class="eb fx-rise difference-d-2" data-fx="reveal" >the delta difference</div>
+    <h2 class="abs h62 lines fx-lines difference-d-3" data-fx="reveal" >
+      <span class="ln"><span class="difference-d-4" >More than just</span></span><span class="ln"><span class="difference-d-5" >another energy drink.</span></span>
+    </h2>
+    <p class="abs b18 fx-rise difference-d-6" data-fx="reveal" >Close to the plant ingredients that are functional, built to work as one system. Lorem ipsum dolor sit, consectetur adipiscing elit.</p>
+    <div class="abs tbl-bg fx-rise difference-d-7" data-fx="table" ></div>
+    <div class="abs dcol fx-rise difference-d-8" data-fx="table" ></div>
+    <div class="abs hl fx-draw difference-d-9" data-fx="table" ></div>
+    <div class="abs hl fx-draw difference-d-10" data-fx="table" ></div>
+    <div class="abs hl fx-draw difference-d-11" data-fx="table" ></div>
+    <div class="abs hl fx-draw difference-d-12" data-fx="table" ></div>
+    <div class="abs hl fx-draw difference-d-13" data-fx="table" ></div>
+    <div class="abs vl fx-fade difference-d-14" data-fx="table" ></div>
+    <div class="abs vl fx-fade difference-d-15" data-fx="table" ></div>
+    <div class="abs vl fx-fade difference-d-16" data-fx="table" ></div>
+    <img class="abs fx-rise difference-d-17" data-fx="table" src="{{ 'logo.png' | asset_url }}" alt="Delta" >
+    <div class="abs logo-energy fx-rise difference-d-18" data-fx="table" >ENERGY</div>
+    <div class="abs colh fx-rise difference-d-19" data-fx="table" >Sugary<br>Energy Drinks</div>
+    <div class="abs colh fx-rise difference-d-20" data-fx="table" >Cup of Coffee</div>
+    <div class="abs colh fx-rise difference-d-21" data-fx="table" >Soda</div>
+    <div class="abs colh fx-rise difference-d-22" data-fx="table" >Nootropics</div>
+    <div class="abs rowl fx-slide difference-d-23" data-fx="table" >Zero Sugar</div>
+    <div class="abs rowl fx-slide difference-d-24" data-fx="table" >200MG Caffeine</div>
+    <div class="abs rowl fx-slide difference-d-25" data-fx="table" >Low calorie</div>
+    <div class="abs rowl fx-slide difference-d-26" data-fx="table" >Functional Ingredients</div>
+    <div class="abs rowl fx-slide difference-d-27" data-fx="table" >Gluten free</div>
+    <div class="abs fx-pop difference-d-28" data-fx="table" ><svg class="chk" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19.5" fill="#C3DF80" stroke="#302C4B" stroke-opacity=".2"/><path d="M13.5 20.5l4.5 4.5 8.5-9.5" fill="none" stroke="#302C4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="abs fx-pop difference-d-29" data-fx="table" ><svg class="chk" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19.5" fill="#C3DF80" stroke="#302C4B" stroke-opacity=".2"/><path d="M13.5 20.5l4.5 4.5 8.5-9.5" fill="none" stroke="#302C4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="abs fx-pop difference-d-30" data-fx="table" ><svg class="chk" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19.5" fill="#C3DF80" stroke="#302C4B" stroke-opacity=".2"/><path d="M13.5 20.5l4.5 4.5 8.5-9.5" fill="none" stroke="#302C4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="abs fx-pop difference-d-31" data-fx="table" ><svg class="chk" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19.5" fill="#C3DF80" stroke="#302C4B" stroke-opacity=".2"/><path d="M13.5 20.5l4.5 4.5 8.5-9.5" fill="none" stroke="#302C4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="abs fx-pop difference-d-32" data-fx="table" ><svg class="chk" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19.5" fill="#C3DF80" stroke="#302C4B" stroke-opacity=".2"/><path d="M13.5 20.5l4.5 4.5 8.5-9.5" fill="none" stroke="#302C4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="abs fx-pop difference-d-33" data-fx="table" ><svg class="chk" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19.5" fill="#C3DF80" stroke="#302C4B" stroke-opacity=".2"/><path d="M13.5 20.5l4.5 4.5 8.5-9.5" fill="none" stroke="#302C4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="abs fx-pop difference-d-34" data-fx="table" ><svg class="chk" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19.5" fill="#C3DF80" stroke="#302C4B" stroke-opacity=".2"/><path d="M13.5 20.5l4.5 4.5 8.5-9.5" fill="none" stroke="#302C4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="abs fx-pop difference-d-35" data-fx="table" ><svg class="chk" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19.5" fill="#C3DF80" stroke="#302C4B" stroke-opacity=".2"/><path d="M13.5 20.5l4.5 4.5 8.5-9.5" fill="none" stroke="#302C4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="abs fx-pop difference-d-36" data-fx="table" ><svg class="chk" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19.5" fill="#C3DF80" stroke="#302C4B" stroke-opacity=".2"/><path d="M13.5 20.5l4.5 4.5 8.5-9.5" fill="none" stroke="#302C4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="abs fx-pop difference-d-37" data-fx="table" ><svg class="chk" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19.5" fill="#C3DF80" stroke="#302C4B" stroke-opacity=".2"/><path d="M13.5 20.5l4.5 4.5 8.5-9.5" fill="none" stroke="#302C4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="abs fx-pop difference-d-38" data-fx="table" ><svg class="chk" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19.5" fill="#C3DF80" stroke="#302C4B" stroke-opacity=".2"/><path d="M13.5 20.5l4.5 4.5 8.5-9.5" fill="none" stroke="#302C4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="abs fx-pop difference-d-39" data-fx="table" ><svg class="chk" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19.5" fill="#C3DF80" stroke="#302C4B" stroke-opacity=".2"/><path d="M13.5 20.5l4.5 4.5 8.5-9.5" fill="none" stroke="#302C4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="abs fx-pop difference-d-40" data-fx="table" ><svg class="chk" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19.5" fill="#C3DF80" stroke="#302C4B" stroke-opacity=".2"/><path d="M13.5 20.5l4.5 4.5 8.5-9.5" fill="none" stroke="#302C4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div class="abs fx-fade difference-d-41" data-fx="table" ><svg class="xx" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" stroke="#302C4B" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+    <div class="abs fx-fade difference-d-42" data-fx="table" ><svg class="xx" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" stroke="#302C4B" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+    <div class="abs fx-fade difference-d-43" data-fx="table" ><svg class="xx" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" stroke="#302C4B" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+    <div class="abs fx-fade difference-d-44" data-fx="table" ><svg class="xx" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" stroke="#302C4B" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+    <div class="abs fx-fade difference-d-45" data-fx="table" ><svg class="xx" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" stroke="#302C4B" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+    <div class="abs fx-fade difference-d-46" data-fx="table" ><svg class="xx" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" stroke="#302C4B" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+    <div class="abs fx-fade difference-d-47" data-fx="table" ><svg class="xx" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" stroke="#302C4B" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+    <div class="abs fx-fade difference-d-48" data-fx="table" ><svg class="xx" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" stroke="#302C4B" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+    <div class="abs fx-fade difference-d-49" data-fx="table" ><svg class="xx" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" stroke="#302C4B" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+    <div class="abs fx-fade difference-d-50" data-fx="table" ><svg class="xx" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" stroke="#302C4B" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+    <div class="abs fx-fade difference-d-51" data-fx="table" ><svg class="xx" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" stroke="#302C4B" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+    <div class="abs fx-fade difference-d-52" data-fx="table" ><svg class="xx" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" stroke="#302C4B" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+  </section>
+
+    </div>
+  </div>
+</div>
+
+<div class="de-home-section__mobile">
+  <section class="ms ms-diff" aria-label="The delta difference">
+    <div class="mfull mtbl-bg fx-fade" data-fx="table"></div>
+    <div class="mfull mtbl-hl fx-draw difference-m-1" data-fx="table" ></div>
+    <div class="mfull mtbl-hl fx-draw difference-m-2" data-fx="table" ></div>
+    <div class="mfull mtbl-hl fx-draw difference-m-3" data-fx="table" ></div>
+    <div class="mfull mtbl-hl fx-draw difference-m-4" data-fx="table" ></div>
+    <div class="mfull mtbl-hl fx-draw difference-m-5" data-fx="table" ></div>
+    <div class="mc">
+      <div class="meb fx-rise difference-m-6" data-fx="reveal" >the delta difference</div>
+      <h2 class="ma mh2 mctr lines fx-lines difference-m-7" data-fx="reveal" >
+        <span class="ln"><span class="difference-m-8" >More than just</span></span><span class="ln"><span class="difference-m-9" >another energy drink.</span></span>
+      </h2>
+      <p class="ma mb15 mctr fx-rise difference-m-10" data-fx="reveal" >Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla.</p>
+      <div class="mdcol fx-rise difference-m-11" data-fx="table" ><img class="difference-m-12" src="{{ 'logo.png' | asset_url }}" alt="Delta" ><div class="difference-m-13" >ENERGY</div></div>
+      <div class="mrowl fx-slide difference-m-14" data-fx="table" >Zero Sugar</div>
+      <div class="mrowl fx-slide difference-m-15" data-fx="table" >200MG Caffeine</div>
+      <div class="mrowl fx-slide difference-m-16" data-fx="table" >Low calorie</div>
+      <div class="mrowl fx-slide difference-m-17" data-fx="table" >Functional<br>Ingredients</div>
+      <div class="mrowl fx-slide difference-m-18" data-fx="table" >Gluten free</div>
+      <div class="mchk fx-pop difference-m-19" data-fx="table" ><svg class="chk" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19.5" fill="#C3DF80" stroke="#302C4B" stroke-opacity=".2"/><path d="M13.5 20.5l4.5 4.5 8.5-9.5" fill="none" stroke="#302C4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="mchk fx-pop difference-m-20" data-fx="table" ><svg class="chk" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19.5" fill="#C3DF80" stroke="#302C4B" stroke-opacity=".2"/><path d="M13.5 20.5l4.5 4.5 8.5-9.5" fill="none" stroke="#302C4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="mchk fx-pop difference-m-21" data-fx="table" ><svg class="chk" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19.5" fill="#C3DF80" stroke="#302C4B" stroke-opacity=".2"/><path d="M13.5 20.5l4.5 4.5 8.5-9.5" fill="none" stroke="#302C4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="mchk fx-pop difference-m-22" data-fx="table" ><svg class="chk" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19.5" fill="#C3DF80" stroke="#302C4B" stroke-opacity=".2"/><path d="M13.5 20.5l4.5 4.5 8.5-9.5" fill="none" stroke="#302C4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="mchk fx-pop difference-m-23" data-fx="table" ><svg class="chk" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19.5" fill="#C3DF80" stroke="#302C4B" stroke-opacity=".2"/><path d="M13.5 20.5l4.5 4.5 8.5-9.5" fill="none" stroke="#302C4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="mcolh fx-rise difference-m-24" data-fx="table" id="mColH" ><span>Sugary<br>Energy Drinks</span><span class="out" aria-hidden="true"></span></div>
+      <div class="mcell is-no fx-fade difference-m-25" data-fx="table" ><span class="yes"><svg class="chk" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19.5" fill="#C3DF80" stroke="#302C4B" stroke-opacity=".2"/><path d="M13.5 20.5l4.5 4.5 8.5-9.5" fill="none" stroke="#302C4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="no"><svg class="xx" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" stroke="#302C4B" stroke-width="1.5" stroke-linecap="round"/></svg></span></div>
+      <div class="mcell is-no fx-fade difference-m-26" data-fx="table" ><span class="yes"><svg class="chk" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19.5" fill="#C3DF80" stroke="#302C4B" stroke-opacity=".2"/><path d="M13.5 20.5l4.5 4.5 8.5-9.5" fill="none" stroke="#302C4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="no"><svg class="xx" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" stroke="#302C4B" stroke-width="1.5" stroke-linecap="round"/></svg></span></div>
+      <div class="mcell is-no fx-fade difference-m-27" data-fx="table" ><span class="yes"><svg class="chk" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19.5" fill="#C3DF80" stroke="#302C4B" stroke-opacity=".2"/><path d="M13.5 20.5l4.5 4.5 8.5-9.5" fill="none" stroke="#302C4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="no"><svg class="xx" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" stroke="#302C4B" stroke-width="1.5" stroke-linecap="round"/></svg></span></div>
+      <div class="mcell is-no fx-fade difference-m-28" data-fx="table" ><span class="yes"><svg class="chk" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19.5" fill="#C3DF80" stroke="#302C4B" stroke-opacity=".2"/><path d="M13.5 20.5l4.5 4.5 8.5-9.5" fill="none" stroke="#302C4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="no"><svg class="xx" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" stroke="#302C4B" stroke-width="1.5" stroke-linecap="round"/></svg></span></div>
+      <div class="mcell is-no fx-fade difference-m-29" data-fx="table" ><span class="yes"><svg class="chk" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19.5" fill="#C3DF80" stroke="#302C4B" stroke-opacity=".2"/><path d="M13.5 20.5l4.5 4.5 8.5-9.5" fill="none" stroke="#302C4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="no"><svg class="xx" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" stroke="#302C4B" stroke-width="1.5" stroke-linecap="round"/></svg></span></div>
+    </div>
+    <div class="mtabs fx-rise difference-m-30" data-fx="reveal" role="tablist" aria-label="Compare with" >
+      <button type="button" class="mtab" role="tab" aria-selected="true" data-comp="sugary">Sugary Energy Drinks</button>
+      <button type="button" class="mtab" role="tab" aria-selected="false" data-comp="coffee">Cup of Coffee</button>
+      <button type="button" class="mtab" role="tab" aria-selected="false" data-comp="soda">Soda</button>
+      <button type="button" class="mtab" role="tab" aria-selected="false" data-comp="noot">Nootropics</button>
+    </div>
+  </section>
+
+</div>
+
+{% schema %}
+{
+  "name": "Home — Difference",
+  "settings": []
+}
+{% endschema %}

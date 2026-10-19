@@ -1,0 +1,139 @@
+{{ 'home-shared.css' | asset_url | stylesheet_tag }}
+{{ 'section-home-ingredients.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'can-gl.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'section-home-ingredients.js' | asset_url }}" defer="defer"></script>
+
+{%- comment -%}
+  Pulled from the Variant F mock's ingredients section (#how / #mhow). The
+  patWrap canvases draw the muted line-art pattern behind the can (ported in
+  section-home-ingredients.js); the turntable canvases (ingCv/mIngCv) render
+  the mock's WebGL cylinder-unwrap "spin" effect (ported in can-gl.js) when
+  WebGL is available, falling back to the static can images' flat flip when
+  it's not.
+{%- endcomment -%}
+
+<div class="de-home-section__desktop">
+  <div class="de-comp">
+    <div class="de-comp__inner ing-comp">
+  <section class="sec sec-ing how-d-1" id="how" data-flavor="pine"  aria-label="Functional ingredients">
+    <div class="abs ing-bg"></div>
+    <div class="abs grain how-d-2" ></div>
+    <div class="abs ing-tint"></div>
+    <div class="abs patwrap how-d-3" id="patWrap" aria-hidden="true"
+      data-pine-img="{{ 'patl_pm.webp' | asset_url }}" data-pine-strokes="{{ 'strk_pm.json' | asset_url }}"
+      data-cherry-img="{{ 'patl_cl.webp' | asset_url }}" data-cherry-strokes="{{ 'strk_cl.json' | asset_url }}"
+    ><canvas class="patcv pine"></canvas><canvas class="patcv cherry"></canvas></div>
+
+    <div class="eb fx-rise how-d-4" data-fx="reveal" >functional ingredients</div>
+    <h2 class="abs h62 lines fx-lines how-d-5" data-fx="reveal" >
+      <span class="ln"><span class="how-d-6" >Real ingredients.</span></span><span class="ln"><span class="how-d-7" >Real focus.</span></span>
+    </h2>
+
+    <div class="abs co-line l fx-draw how-d-8" data-fx="callouts" ></div>
+    <div class="abs co-line r fx-draw how-d-9" data-fx="callouts" ></div>
+    <div class="abs co-line l fx-draw how-d-10" data-fx="callouts" ></div>
+    <div class="abs co-line r fx-draw how-d-11" data-fx="callouts" ></div>
+
+    <div class="cluster" id="cluster" data-spin-cherry="{{ 'ing_spin_cl.webp' | asset_url }}" data-spin-pine="{{ 'ing_spin_pm.webp' | asset_url }}">
+      <div class="cl-set pine" data-px="-0.06"><div class="fruit back set how-d-12" ><div class="fb"><img src="{{ 'ing_back.webp' | asset_url }}" alt="" loading="lazy"></div></div></div>
+      <div class="cl-set cherry" data-px="-0.06">
+        <div class="abs cl-ground"></div>
+        <div class="fruit back how-d-13" ><div class="fb"><img class="how-d-14" src="{{ 'lime_t.webp' | asset_url }}" alt="" loading="lazy" ></div></div>
+        <div class="fruit back how-d-15" ><div class="fb"><img class="how-d-16" src="{{ 'cherry_t.webp' | asset_url }}" alt="" loading="lazy" ></div></div>
+      </div>
+      <div class="cl-can" id="clCan">
+        <canvas class="ing-cv" id="ingCv" role="img" aria-label="Pineapple Mango can"></canvas>
+        <img class="can-pine how-d-17" src="{{ 'ing_can.webp' | asset_url }}" alt="Pineapple Mango can" loading="lazy" >
+        <img class="can-cherry" src="{{ 'cl_can_upright.webp' | asset_url }}" alt="Cherry Limeade can" loading="lazy">
+      </div>
+      <div class="cl-set pine" data-px="0.08"><div class="fruit fore set how-d-18" ><div class="fb"><img src="{{ 'ing_front.webp' | asset_url }}" alt="" loading="lazy"></div></div></div>
+      <div class="cl-set cherry" data-px="0.08">
+        <div class="fruit fore how-d-19" ><div class="fb"><img class="how-d-20" src="{{ 'cherry_t.webp' | asset_url }}" alt="" loading="lazy" ></div></div>
+        <div class="fruit fore how-d-21" ><div class="fb"><img class="how-d-22" src="{{ 'lime_t.webp' | asset_url }}" alt="" loading="lazy" ></div></div>
+      </div>
+    </div>
+
+    <div class="abs co-ico fx-pop how-d-23" data-fx="callouts" ><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 .5v11M.5 6h11" stroke="#302C4B" stroke-width="1.5"/></svg></div>
+    <div class="abs co-ico fx-pop how-d-24" data-fx="callouts" ><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 .5v11M.5 6h11" stroke="#302C4B" stroke-width="1.5"/></svg></div>
+    <div class="abs co-ico fx-pop how-d-25" data-fx="callouts" ><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 .5v11M.5 6h11" stroke="#302C4B" stroke-width="1.5"/></svg></div>
+    <div class="abs co-ico fx-pop how-d-26" data-fx="callouts" ><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 .5v11M.5 6h11" stroke="#302C4B" stroke-width="1.5"/></svg></div>
+    <div class="abs fx-slide how-d-27" data-fx="callouts" ><div class="co-t">Natural Caffeine + L-Theanine</div><div class="co-s how-d-28" >Boosts natural energy</div></div>
+    <div class="abs fx-slide co-r how-d-29" data-fx="callouts" ><div class="co-t">Whole Flower Terpenes</div><div class="co-s how-d-28" >Sharpens focus</div></div>
+    <div class="abs fx-slide how-d-30" data-fx="callouts" ><div class="co-t">Cognizin + L-Tyrosine</div><div class="co-s how-d-28" >Enhances mental clarity</div></div>
+    <div class="abs fx-slide co-r how-d-31" data-fx="callouts" ><div class="co-t">ALCAR + PPQ + B-Vitamins</div><div class="co-s how-d-28" >Improves cellular health</div></div>
+
+    <p class="abs b18 fx-rise how-d-32" data-fx="reveal" >Close to the plant ingredients that are functional, built to work as one system. Lorem ipsum dolor sit, consectetur adipiscing elit.</p>
+
+    <div class="abs switch-row how-d-33" >
+      <button type="button" class="sw-lbl cherry" data-ing="cherry">Cherry Limeade</button>
+      <button type="button" class="tgl" id="ingToggle" role="switch" aria-checked="true" aria-label="Show Pineapple Mango"></button>
+      <button type="button" class="sw-lbl pine" data-ing="pine">Pineapple Mango</button>
+    </div>
+
+    <div class="etile how-d-34" data-win="110" ><div class="ewin how-d-35" ><div class="epar"><img class="tl pine how-d-36" src="{{ 'e2_tile_l_pm.webp' | asset_url }}" alt="" loading="lazy" ><img class="tl cherry how-d-37" src="{{ 'e2_tile_l_cs.webp' | asset_url }}" alt="" loading="lazy" ></div></div><div class="ewin how-d-38" ><div class="epar"><img class="tl pine how-d-39" src="{{ 'e2_tile_l_pm.webp' | asset_url }}" alt="" loading="lazy" ><img class="tl cherry how-d-40" src="{{ 'e2_tile_l_cb.webp' | asset_url }}" alt="" loading="lazy" ></div></div></div>
+    <div class="etile how-d-41" data-win="110" ><div class="ewin how-d-42" ><div class="epar"><img class="tl pine how-d-43" src="{{ 'e2_tile_r_pm.webp' | asset_url }}" alt="" loading="lazy" ><img class="tl cherry how-d-40" src="{{ 'e2_tile_r_lb.webp' | asset_url }}" alt="" loading="lazy" ></div></div><div class="ewin how-d-44" ><div class="epar"><img class="tl pine how-d-45" src="{{ 'e2_tile_r_pm.webp' | asset_url }}" alt="" loading="lazy" ><img class="tl cherry how-d-37" src="{{ 'e2_tile_r_ls.webp' | asset_url }}" alt="" loading="lazy" ></div></div></div>
+  </section>
+
+    </div>
+  </div>
+</div>
+
+<div class="de-home-section__mobile">
+  <section class="ms ms-ing" id="mhow" data-flavor="pine" aria-label="Functional ingredients">
+    <div class="mfull mbg"></div>
+    <div class="mfull grain mgrain"></div>
+    <div class="ming-tint"></div>
+    <div class="mc">
+      <div class="meb fx-rise how-m-1" data-fx="reveal" >functional ingredients</div>
+      <h2 class="ma mh2 mctr lines fx-lines how-m-2" data-fx="reveal" >
+        <span class="ln"><span class="how-m-3" >Real ingredients.</span></span><span class="ln"><span class="how-m-4" >Real focus.</span></span>
+      </h2>
+      <p class="ma mb15 mctr fx-rise how-m-5" data-fx="reveal" >Close to the plant ingredients that are functional, built to work as one system. Lorem ipsum dolor sit, consectetur adipiscing elit.</p>
+
+      <div class="ma patwrap how-m-6" id="mPatWrap" aria-hidden="true"
+        data-pine-img="{{ 'patl_pm.webp' | asset_url }}" data-pine-strokes="{{ 'strk_pm.json' | asset_url }}"
+        data-cherry-img="{{ 'patl_cl.webp' | asset_url }}" data-cherry-strokes="{{ 'strk_cl.json' | asset_url }}"
+      ><canvas class="patcv pine"></canvas><canvas class="patcv cherry"></canvas></div>
+      <div class="etile how-m-7" data-win="40" ><div class="ewin how-m-8" ><div class="epar"><img class="tl pine how-m-9" src="{{ 'e2m_tile_l_pm.webp' | asset_url }}" alt="" loading="lazy" ><img class="tl cherry how-m-10" src="{{ 'e2m_tile_l_cs.webp' | asset_url }}" alt="" loading="lazy" ></div></div><div class="ewin how-m-11" ><div class="epar"><img class="tl pine how-m-12" src="{{ 'e2m_tile_l_pm.webp' | asset_url }}" alt="" loading="lazy" ><img class="tl cherry how-m-13" src="{{ 'e2m_tile_l_cb.webp' | asset_url }}" alt="" loading="lazy" ></div></div></div>
+      <div class="etile how-m-14" data-win="40" ><div class="ewin how-m-15" ><div class="epar"><img class="tl pine how-m-16" src="{{ 'e2m_tile_r_pm.webp' | asset_url }}" alt="" loading="lazy" ><img class="tl cherry how-m-17" src="{{ 'e2m_tile_r_lb.webp' | asset_url }}" alt="" loading="lazy" ></div></div><div class="ewin how-m-18" ><div class="epar"><img class="tl pine how-m-19" src="{{ 'e2m_tile_r_pm.webp' | asset_url }}" alt="" loading="lazy" ><img class="tl cherry how-m-20" src="{{ 'e2m_tile_r_ls.webp' | asset_url }}" alt="" loading="lazy" ></div></div></div>
+
+      <div class="mcluster" data-spin-cherry="{{ 'ing_spin_cl.webp' | asset_url }}" data-spin-pine="{{ 'ing_spin_pm.webp' | asset_url }}">
+        <div class="cl-set pine" data-mpx="-0.04"><div class="fruit back set how-m-21" ><div class="fb"><img src="{{ 'm_i_back.webp' | asset_url }}" alt="" loading="lazy"></div></div></div>
+        <div class="cl-set cherry" data-mpx="-0.04">
+          <div class="mcl-ground"></div>
+          <div class="fruit back how-m-22" ><div class="fb"><img class="how-m-23" src="{{ 'lime_t.webp' | asset_url }}" alt="" loading="lazy" ></div></div>
+          <div class="fruit back how-m-24" ><div class="fb"><img class="how-m-25" src="{{ 'cherry_t.webp' | asset_url }}" alt="" loading="lazy" ></div></div>
+        </div>
+        <div class="mcl-can" id="mclCan">
+          <canvas class="ing-cv" id="mIngCv" role="img" aria-label="Pineapple Mango can"></canvas>
+          <img class="can-pine how-m-26" src="{{ 'm_i_can.webp' | asset_url }}" alt="Pineapple Mango can" loading="lazy" >
+          <img class="can-cherry how-m-27" src="{{ 'cl_can_upright.webp' | asset_url }}" alt="Cherry Limeade can" loading="lazy" >
+        </div>
+        <div class="cl-set pine" data-mpx="0.05"><div class="fruit fore set how-m-28" ><div class="fb"><img src="{{ 'm_i_front.webp' | asset_url }}" alt="" loading="lazy"></div></div></div>
+        <div class="cl-set cherry" data-mpx="0.05">
+          <div class="fruit fore how-m-29" ><div class="fb"><img class="how-m-30" src="{{ 'cherry_t.webp' | asset_url }}" alt="" loading="lazy" ></div></div>
+          <div class="fruit fore how-m-31" ><div class="fb"><img class="how-m-32" src="{{ 'lime_t.webp' | asset_url }}" alt="" loading="lazy" ></div></div>
+        </div>
+      </div>
+
+      <button type="button" class="msw-lbl cherry how-m-33"  data-ming="cherry">Cherry Limeade</button>
+      <button type="button" class="mtgl" id="mIngToggle" role="switch" aria-checked="true" aria-label="Show Cherry Limeade"></button>
+      <button type="button" class="msw-lbl pine how-m-34"  data-ming="pine">Pineapple Mango</button>
+
+      <div class="mlist">
+        <div class="mli fx-slide how-m-35" data-fx="callouts" ><button type="button" class="mli-btn" aria-expanded="false" aria-controls="mli0"><span><span class="mli-t">Natural Caffeine + L-Theanine</span><span class="mli-s">Boosts natural energy</span></span><span class="mli-ico"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M5 .5v9M.5 5h9" stroke="#302C4B" stroke-width="1.5" stroke-linecap="round"/></svg></span></button><div class="mli-a" id="mli0" role="region"><div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna, pellentesque sit amet sapien fringilla.</p></div></div></div>
+        <div class="mli fx-slide how-m-36" data-fx="callouts" ><button type="button" class="mli-btn" aria-expanded="false" aria-controls="mli1"><span><span class="mli-t">Cognizin + L-Tyrosine</span><span class="mli-s">Enhances mental clarity</span></span><span class="mli-ico"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M5 .5v9M.5 5h9" stroke="#302C4B" stroke-width="1.5" stroke-linecap="round"/></svg></span></button><div class="mli-a" id="mli1" role="region"><div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna, pellentesque sit amet sapien fringilla.</p></div></div></div>
+        <div class="mli fx-slide how-m-37" data-fx="callouts" ><button type="button" class="mli-btn" aria-expanded="false" aria-controls="mli2"><span><span class="mli-t">Whole Flower Terpenes</span><span class="mli-s">Sharpens focus</span></span><span class="mli-ico"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M5 .5v9M.5 5h9" stroke="#302C4B" stroke-width="1.5" stroke-linecap="round"/></svg></span></button><div class="mli-a" id="mli2" role="region"><div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna, pellentesque sit amet sapien fringilla.</p></div></div></div>
+        <div class="mli fx-slide how-m-38" data-fx="callouts" ><button type="button" class="mli-btn" aria-expanded="false" aria-controls="mli3"><span><span class="mli-t">ALCAR + PPQ + B-Vitamins</span><span class="mli-s">Improves cellular health</span></span><span class="mli-ico"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M5 .5v9M.5 5h9" stroke="#302C4B" stroke-width="1.5" stroke-linecap="round"/></svg></span></button><div class="mli-a" id="mli3" role="region"><div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna, pellentesque sit amet sapien fringilla.</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+{% schema %}
+{
+  "name": "Home — Ingredients",
+  "settings": []
+}
+{% endschema %}

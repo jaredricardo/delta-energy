@@ -1,0 +1,16 @@
+{
+  "name": "delta-energy-theme",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Shopify theme for Delta Energy",
+  "scripts": {
+    "dev": "shopify theme dev --store=bfac5a-e3.myshopify.com",
+    "push": "shopify theme push --store=bfac5a-e3.myshopify.com",
+    "pull": "shopify theme pull --development --nodelete",
+    "check": "shopify theme check"
+  },
+  "devDependencies": {
+    "@shopify/cli": "^3.70.0",
+    "@shopify/theme": "^3.70.0"
+  }
+}

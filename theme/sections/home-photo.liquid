@@ -1,0 +1,32 @@
+{{ 'home-shared.css' | asset_url | stylesheet_tag }}
+{{ 'section-home-photo.css' | asset_url | stylesheet_tag }}
+
+{%- comment -%}
+  Pulled from the mock's lifestyle photo layer (#photo / #mphoto), originally
+  a full-bleed image the comparison-table section scrolled over.
+{%- endcomment -%}
+
+<div class="de-home-section__desktop">
+  <div class="de-comp">
+    <div class="de-comp__inner photo-comp">
+      <section class="sec" aria-label="Lifestyle">
+        <div class="abs photo">
+          <img src="{{ 'e2_golfer.webp' | asset_url }}" alt="A golfer crouched on the green holds a can of Delta Energy Pineapple Mango toward the camera" loading="lazy">
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<div class="de-home-section__mobile">
+  <section class="ms ms-photo" aria-label="Lifestyle">
+    <img src="{{ 'e2m_golfer.webp' | asset_url }}" alt="A golfer crouched on the green holds a can of Delta Energy Pineapple Mango toward the camera" loading="lazy">
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "Home — Lifestyle photo",
+  "settings": []
+}
+{% endschema %}

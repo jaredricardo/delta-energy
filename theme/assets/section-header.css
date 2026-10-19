@@ -1,0 +1,74 @@
+/* Delta Energy — header section styles */
+.de-header{
+  position:sticky;top:0;left:0;right:0;z-index:100;
+  background:var(--de-paper);
+  border-bottom:1px solid var(--de-hairline);
+}
+.de-header__bar{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  height:var(--de-header-height-mobile);
+}
+.de-header__logo{display:flex;align-items:center}
+.de-header__logo img{width:120px;height:auto}
+.de-header__logo-text{font-family:var(--de-font-logo);font-weight:700;font-size:20px;letter-spacing:-.5px;color:var(--de-purple)}
+
+.de-header__nav{display:none}
+.de-header__nav-list{display:flex;gap:30px}
+.de-header__nav-list a{
+  font-weight:700;font-size:16px;letter-spacing:-.4px;color:var(--de-purple-2);
+  background:linear-gradient(currentColor,currentColor) 0 100%/0 2px no-repeat;
+  transition:background-size .35s var(--de-ease);
+}
+.de-header__nav-list a:hover{background-size:100% 2px}
+
+.de-header__actions{display:flex;align-items:center;gap:10px}
+.de-header__icon-btn{
+  position:relative;display:inline-flex;align-items:center;justify-content:center;
+  width:40px;height:40px;border-radius:50%;color:var(--de-purple);
+  transition:background var(--de-duration-fast) ease;
+}
+.de-header__icon-btn:hover{background:var(--de-tile)}
+.de-header__cart-count{
+  position:absolute;top:-2px;right:-2px;
+  min-width:18px;height:18px;padding:0 4px;border-radius:50%;
+  background:var(--de-purple-2);color:var(--de-white);
+  font-family:var(--de-font-display);font-weight:700;font-size:11px;line-height:18px;text-align:center;
+}
+
+.de-header__burger{
+  display:flex;flex-direction:column;justify-content:center;gap:4px;
+  width:40px;height:40px;
+}
+.de-header__burger span{
+  display:block;width:22px;height:2px;margin:0 auto;background:var(--de-purple);
+  transition:transform var(--de-duration-fast) ease,opacity var(--de-duration-fast) ease;
+}
+
+@media (min-width:1100px){
+  .de-header__bar{height:var(--de-header-height)}
+  .de-header__logo img{width:164px}
+  .de-header__nav{display:block}
+  .de-header__burger{display:none}
+}
+
+/* Homepage: the hero is the first section, so instead of sitting in its own
+   bar above it, the header overlays the hero transparently (matching the
+   Variant F mock's nav baked into #stage). Scrolling solidifies it with a
+   blurred background, and it hides/reveals on scroll direction once you're
+   past the hero — ported from the mock's "solid once scrolled, hides on the
+   way down" header behavior. */
+.template-index .de-header{
+  position:fixed;
+  background:transparent;
+  border-bottom:1px solid transparent;
+  transition:background-color .3s ease,border-color .3s ease,transform .55s var(--de-ease);
+}
+.template-index .de-header.is-solid{
+  background:rgb(253 253 252 / .86);
+  border-bottom-color:var(--de-hairline);
+  -webkit-backdrop-filter:blur(16px);
+  backdrop-filter:blur(16px);
+}
+.template-index .de-header.is-hidden{
+  transform:translateY(-100%);
+}

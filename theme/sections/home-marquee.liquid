@@ -1,0 +1,39 @@
+{{ 'home-shared.css' | asset_url | stylesheet_tag }}
+{{ 'section-home-marquee.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'section-home-marquee.js' | asset_url }}" defer="defer"></script>
+
+{%- comment -%}
+  Pulled from the mock's "Flavor + Function + Focus" marquee. Simplified
+  from the original scroll-velocity-driven animation to a steady CSS loop.
+{%- endcomment -%}
+
+<div class="de-home-section__desktop">
+  <div class="de-comp">
+    <div class="de-comp__inner marquee-comp">
+  <section class="sec marquee-d-1" id="marquee"  aria-label="Flavor, function, focus">
+    <div class="abs mq"><div class="mq-track" id="mqTrack"><div class="mq-group"><span class="mq-item">Flavor</span><svg class="mq-plus" viewBox="0 0 42 42" aria-hidden="true"><path d="M21 1v40M1 21h40" stroke="#302952" stroke-width="2"/></svg><span class="mq-item">Function</span><svg class="mq-plus" viewBox="0 0 42 42" aria-hidden="true"><path d="M21 1v40M1 21h40" stroke="#302952" stroke-width="2"/></svg><span class="mq-item">Focus</span><svg class="mq-plus" viewBox="0 0 42 42" aria-hidden="true"><path d="M21 1v40M1 21h40" stroke="#302952" stroke-width="2"/></svg></div><div class="mq-group" aria-hidden="true"><span class="mq-item">Flavor</span><svg class="mq-plus" viewBox="0 0 42 42" aria-hidden="true"><path d="M21 1v40M1 21h40" stroke="#302952" stroke-width="2"/></svg><span class="mq-item">Function</span><svg class="mq-plus" viewBox="0 0 42 42" aria-hidden="true"><path d="M21 1v40M1 21h40" stroke="#302952" stroke-width="2"/></svg><span class="mq-item">Focus</span><svg class="mq-plus" viewBox="0 0 42 42" aria-hidden="true"><path d="M21 1v40M1 21h40" stroke="#302952" stroke-width="2"/></svg></div><div class="mq-group" aria-hidden="true"><span class="mq-item">Flavor</span><svg class="mq-plus" viewBox="0 0 42 42" aria-hidden="true"><path d="M21 1v40M1 21h40" stroke="#302952" stroke-width="2"/></svg><span class="mq-item">Function</span><svg class="mq-plus" viewBox="0 0 42 42" aria-hidden="true"><path d="M21 1v40M1 21h40" stroke="#302952" stroke-width="2"/></svg><span class="mq-item">Focus</span><svg class="mq-plus" viewBox="0 0 42 42" aria-hidden="true"><path d="M21 1v40M1 21h40" stroke="#302952" stroke-width="2"/></svg></div></div></div>
+    <div class="fruit fore marquee-d-2" data-px="0.15" ><div class="fb"><img src="{{ 'mq_lime.webp' | asset_url }}" alt="" loading="lazy"></div></div>
+    <div class="fruit fore marquee-d-3" data-px="0.19" ><div class="fb"><img src="{{ 'mq_pine.webp' | asset_url }}" alt="" loading="lazy"></div></div>
+  </section>
+
+    </div>
+  </div>
+</div>
+
+<div class="de-home-section__mobile">
+  <section class="ms ms-mq" aria-label="Flavor, function, focus">
+    <div class="mmq"><div class="mmq-track" id="mmqTrack"><div class="mq-group"><span class="mmq-item">Flavor</span><svg class="mmq-plus" viewBox="0 0 22 22" aria-hidden="true"><path d="M11 .5v21M.5 11h21" stroke="#302952" stroke-width="2"/></svg><span class="mmq-item">Function</span><svg class="mmq-plus" viewBox="0 0 22 22" aria-hidden="true"><path d="M11 .5v21M.5 11h21" stroke="#302952" stroke-width="2"/></svg><span class="mmq-item">Focus</span><svg class="mmq-plus" viewBox="0 0 22 22" aria-hidden="true"><path d="M11 .5v21M.5 11h21" stroke="#302952" stroke-width="2"/></svg></div><div class="mq-group" aria-hidden="true"><span class="mmq-item">Flavor</span><svg class="mmq-plus" viewBox="0 0 22 22" aria-hidden="true"><path d="M11 .5v21M.5 11h21" stroke="#302952" stroke-width="2"/></svg><span class="mmq-item">Function</span><svg class="mmq-plus" viewBox="0 0 22 22" aria-hidden="true"><path d="M11 .5v21M.5 11h21" stroke="#302952" stroke-width="2"/></svg><span class="mmq-item">Focus</span><svg class="mmq-plus" viewBox="0 0 22 22" aria-hidden="true"><path d="M11 .5v21M.5 11h21" stroke="#302952" stroke-width="2"/></svg></div><div class="mq-group" aria-hidden="true"><span class="mmq-item">Flavor</span><svg class="mmq-plus" viewBox="0 0 22 22" aria-hidden="true"><path d="M11 .5v21M.5 11h21" stroke="#302952" stroke-width="2"/></svg><span class="mmq-item">Function</span><svg class="mmq-plus" viewBox="0 0 22 22" aria-hidden="true"><path d="M11 .5v21M.5 11h21" stroke="#302952" stroke-width="2"/></svg><span class="mmq-item">Focus</span><svg class="mmq-plus" viewBox="0 0 22 22" aria-hidden="true"><path d="M11 .5v21M.5 11h21" stroke="#302952" stroke-width="2"/></svg></div></div></div>
+    <div class="mc">
+      <div class="fruit fore marquee-m-1" data-mpx="0.1" ><div class="fb"><img src="{{ 'm_q_lime.webp' | asset_url }}" alt="" loading="lazy"></div></div>
+      <div class="fruit fore marquee-m-2" data-mpx="0.14" ><div class="fb"><img src="{{ 'm_q_pine.webp' | asset_url }}" alt="" loading="lazy"></div></div>
+    </div>
+  </section>
+
+</div>
+
+{% schema %}
+{
+  "name": "Home — Marquee",
+  "settings": []
+}
+{% endschema %}

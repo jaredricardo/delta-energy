@@ -1,0 +1,79 @@
+{{ 'cart-drawer.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
+
+<div id="CartDrawerOverlay" class="de-overlay" aria-hidden="true"></div>
+
+<aside
+  id="CartDrawer"
+  class="de-cart-drawer"
+  aria-hidden="true"
+  aria-label="Cart"
+  role="dialog"
+  aria-modal="true"
+>
+  <div class="de-cart-drawer__head">
+    <h2 class="de-cart-drawer__title">Cart ({{ cart.item_count }})</h2>
+    <button type="button" class="de-cart-drawer__close" data-drawer-close aria-label="Close cart">
+      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+        <path d="M2 2l12 12M14 2L2 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="de-cart-drawer__body" data-cart-body>
+    {%- if cart.item_count == 0 -%}
+      <p class="de-cart-drawer__empty">Your cart is empty.</p>
+      <a href="{{ routes.all_products_collection_url }}" class="de-btn de-btn--primary">Continue shopping</a>
+    {%- else -%}
+      <ul class="de-cart-drawer__items">
+        {%- for item in cart.items -%}
+          <li class="de-cart-drawer__item">
+            <a href="{{ item.url }}" class="de-cart-drawer__item-image">
+              {%- if item.image -%}
+                <img src="{{ item.image | image_url: width: 160 }}" alt="{{ item.image.alt | escape }}" width="80" height="80" loading="lazy">
+              {%- endif -%}
+            </a>
+            <div class="de-cart-drawer__item-info">
+              <a href="{{ item.url }}" class="de-cart-drawer__item-title">{{ item.product.title }}</a>
+              {%- if item.variant.title != 'Default Title' -%}
+                <span class="de-mono">{{ item.variant.title }}</span>
+              {%- endif -%}
+              <span class="de-cart-drawer__item-price">{{ item.final_line_price | money }}</span>
+            </div>
+            <form action="{{ routes.cart_change_url }}" method="post" class="de-cart-drawer__item-qty">
+              <label class="visually-hidden" for="CartQty-{{ item.key }}">Quantity</label>
+              <input
+                type="number"
+                id="CartQty-{{ item.key }}"
+                name="quantity"
+                value="{{ item.quantity }}"
+                min="0"
+                data-cart-qty-input
+                data-line="{{ forloop.index }}"
+              >
+            </form>
+            <a
+              href="{{ item.url_to_remove }}"
+              class="de-cart-drawer__item-remove"
+              aria-label="Remove {{ item.product.title }} from cart"
+            >
+              <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" focusable="false">
+                <path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+  </div>
+
+  {%- if cart.item_count > 0 -%}
+    <div class="de-cart-drawer__foot">
+      <div class="de-cart-drawer__subtotal">
+        <span>Subtotal</span>
+        <span>{{ cart.total_price | money }}</span>
+      </div>
+      <a href="{{ routes.cart_url }}" class="de-btn de-btn--primary de-cart-drawer__checkout">Checkout</a>
+    </div>
+  {%- endif -%}
+</aside>

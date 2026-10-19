@@ -1,0 +1,175 @@
+/* ==========================================================================
+   Delta Energy — base.css
+   Root variables, reset, global typography and shared layout primitives.
+   Section-specific styling lives in each section file's {% style %} block.
+   ========================================================================== */
+
+:root{
+  /* ---------- color palette ---------- */
+  --de-purple:#302C4B;        /* primary navy/purple - headings, nav, body copy */
+  --de-purple-2:#302952;      /* secondary purple - buttons, badges */
+  --de-ink:#221D39;           /* darkest purple - high-contrast text */
+  --de-lime:#C3DF80;          /* chip / tag background */
+  --de-crimson:#CD003A;       /* cherry flavor accent, focus outline */
+  --de-gold:#ECA000;          /* pineapple/mango flavor accent */
+  --de-amber:#DE9100;         /* secondary gold accent */
+  --de-green:#588B0E;         /* lime flavor accent */
+  --de-tile:#F1F3F4;          /* light neutral tile background */
+  --de-hairline:#D7D5DC;      /* dividers / borders */
+  --de-paper:#FDFDFC;         /* page background */
+  --de-price:#6E6B81;         /* muted price text */
+  --de-footer:#1B172E;        /* footer background */
+  --de-muted:#6A6680;         /* muted / secondary text */
+  --de-white:#FFFFFF;
+
+  /* ---------- fonts ---------- */
+  --de-font-display:"Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --de-font-mono:"Space Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --de-font-logo:"Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* ---------- motion ---------- */
+  --de-ease:cubic-bezier(.22,1,.36,1);
+  --de-spring:cubic-bezier(.34,1.56,.64,1);
+  --de-duration-fast:.3s;
+  --de-duration:.45s;
+
+  /* ---------- layout ---------- */
+  --de-container-max:1760px;
+  --de-gutter:80px;
+  --de-gutter-mobile:20px;
+  --de-header-height:96px;
+  --de-header-height-mobile:72px;
+  --de-radius-sm:5px;
+  --de-radius-md:20px;
+  --de-radius-pill:100px;
+
+  color-scheme: light;
+}
+
+/* ---------- reset ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+html,body{background:var(--de-paper);color:var(--de-purple);margin:0;padding:0}
+body{font-family:var(--de-font-display);font-size:16px;line-height:1.5}
+img,picture,svg,video{max-width:100%;display:block}
+button,input,select,textarea{font:inherit;color:inherit}
+button{background:none;border:0;cursor:pointer;padding:0}
+a{color:inherit}
+ul,ol{margin:0;padding:0;list-style:none}
+
+/* ---------- accessibility helpers ---------- */
+:focus-visible{outline:3px solid var(--de-crimson);outline-offset:3px}
+.visually-hidden,
+.skip-to-content-link:not(:focus){
+  position:absolute !important;
+  overflow:hidden;
+  width:1px;height:1px;
+  margin:-1px;padding:0;border:0;
+  clip:rect(0,0,0,0);
+  clip-path:inset(50%);
+  white-space:nowrap;
+}
+.skip-to-content-link{
+  position:fixed;top:0;left:0;z-index:1000;
+  background:var(--de-purple);color:var(--de-white);
+  padding:12px 20px;border-radius:0 0 var(--de-radius-sm) 0;
+  font-weight:700;text-decoration:none;
+}
+
+/* ---------- typography scale ----------
+   Desktop sizes are sourced from the comp (headline 120px/h1, section
+   headers 62-65px/h2, card headers 45px/h3). Mobile sizes scale down to
+   keep the same relative hierarchy on small viewports. */
+h1,.h1{margin:0 0 .4em;font-family:var(--de-font-display);font-weight:700;font-size:48px;line-height:.95;letter-spacing:-2px;color:var(--de-purple)}
+h2,.h2{margin:0 0 .4em;font-family:var(--de-font-display);font-weight:700;font-size:38px;line-height:.95;letter-spacing:-1.6px;color:var(--de-purple)}
+h3,.h3{margin:0 0 .4em;font-family:var(--de-font-display);font-weight:700;font-size:28px;line-height:1;letter-spacing:-1.1px;color:var(--de-purple)}
+h4,.h4{margin:0 0 .4em;font-family:var(--de-font-display);font-weight:700;font-size:22px;line-height:1.05;letter-spacing:-.6px;color:var(--de-purple)}
+h5,.h5{margin:0 0 .4em;font-family:var(--de-font-display);font-weight:700;font-size:18px;line-height:1.1;letter-spacing:-.4px;color:var(--de-purple)}
+h6,.h6{margin:0 0 .4em;font-family:var(--de-font-display);font-weight:700;font-size:16px;line-height:1.1;letter-spacing:-.3px;color:var(--de-purple);text-transform:uppercase}
+p{margin:0 0 1em;font-family:var(--de-font-display);font-weight:500;font-size:15px;line-height:1.65;letter-spacing:-.3px;color:rgb(48 44 75 / .85)}
+p:last-child{margin-bottom:0}
+span{font-size:1em}
+a{font-weight:700;text-decoration:none}
+small,.de-mono{font-family:var(--de-font-mono);font-size:12px;line-height:1.05;letter-spacing:-.24px;text-transform:uppercase;color:var(--de-purple)}
+
+@media (min-width:1100px){
+  h1,.h1{font-size:90px;letter-spacing:-4.5px}
+  h2,.h2{font-size:62px;letter-spacing:-3.1px}
+  h3,.h3{font-size:45px;letter-spacing:-1.8px}
+  h4,.h4{font-size:26px;letter-spacing:-.78px}
+  h5,.h5{font-size:20px}
+  h6,.h6{font-size:18px}
+  p{font-size:18px;letter-spacing:-.36px}
+  a{font-size:18px}
+  small,.de-mono{font-size:14px;letter-spacing:-.28px}
+}
+
+/* ---------- shared layout primitives ---------- */
+.de-container{width:100%;max-width:var(--de-container-max);margin:0 auto;padding:0 var(--de-gutter-mobile)}
+@media (min-width:1100px){
+  .de-container{padding:0 var(--de-gutter)}
+}
+.de-main{position:relative}
+
+/* reusable pill/tag + button styles shared across sections */
+.de-eyebrow{display:inline-block;background:var(--de-tile);border-radius:var(--de-radius-sm);padding:6px 16px 7px;font-family:var(--de-font-mono);font-size:12px;letter-spacing:-.24px;text-transform:uppercase;color:var(--de-purple)}
+.de-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:var(--de-radius-pill);padding:14px 28px;font-weight:800;font-size:15px;letter-spacing:-.3px;text-decoration:none;transition:background var(--de-duration-fast) ease,color var(--de-duration-fast) ease,transform var(--de-duration-fast) var(--de-spring)}
+.de-btn--primary{background:var(--de-purple);color:var(--de-white);border:2px solid var(--de-purple)}
+.de-btn--primary:hover{background:transparent;color:var(--de-purple)}
+.de-btn:hover{transform:scale(1.04)}
+
+/* ---------- scroll reveal animations (shared across sections) ---------- */
+html.js .fx-rise:not(.in){opacity:0;transform:translate3d(0,var(--ry,32px),0)}
+html.js .fx-rise{transition:opacity .8s ease var(--rd,0ms),transform 1s var(--de-ease) var(--rd,0ms)}
+html.js .fx-slide:not(.in){opacity:0;transform:translate3d(var(--rx,-24px),0,0)}
+html.js .fx-slide{transition:opacity .7s ease var(--rd,0ms),transform .9s var(--de-ease) var(--rd,0ms)}
+html.js .fx-pop:not(.in){opacity:0;transform:scale(.3)}
+html.js .fx-pop{transition:opacity .35s ease var(--rd,0ms),transform .6s var(--de-spring) var(--rd,0ms)}
+html.js .fx-fade:not(.in){opacity:0}
+html.js .fx-fade{transition:opacity .8s ease var(--rd,0ms)}
+.fx-instant{transition:none !important}
+@media (prefers-reduced-motion: reduce){
+  .fx-rise,.fx-slide,.fx-pop,.fx-fade{transition:none !important;opacity:1 !important;transform:none !important}
+  *{animation-duration:0.001ms !important;animation-iteration-count:1 !important}
+}
+
+/* ---------- overlay shared by the cart + mobile nav asides ---------- */
+.de-overlay{
+  position:fixed;inset:0;z-index:90;
+  background:rgb(34 29 57 / .55);
+  opacity:0;visibility:hidden;
+  transition:opacity var(--de-duration) ease,visibility 0s linear var(--de-duration);
+}
+.de-overlay.is-visible{opacity:1;visibility:visible;transition:opacity var(--de-duration) ease}
+body.de-no-scroll{overflow:hidden}
+
+/* ---------- desktop / mobile layout swap used by the homepage sections ----------
+   The homepage mock ships two parallel markups per section (a 1920px "comp"
+   layout and a separate mobile layout) rather than one fluid layout, so each
+   pulled-in section keeps that same pattern: one wrapper shown from 1100px
+   up, the other shown below it. */
+.de-home-section__desktop{display:none}
+.de-home-section__mobile{display:block}
+@media (min-width:1100px){
+  .de-home-section__desktop{display:block}
+  .de-home-section__mobile{display:none}
+}
+
+/* desktop sections are built from the mock's fixed 1920px comp and scaled
+   down to fit the viewport width; .de-comp measures itself and sets
+   --comp-scale via global.js, .de-comp__inner is the 1920px canvas */
+.de-comp{position:relative;width:100%;overflow:hidden}
+.de-comp__inner{position:absolute;left:0;top:0;width:1920px;transform-origin:0 0;transform:scale(var(--comp-scale, .5))}
+
+/* some comps intentionally paint past their own box (e.g. the hero's hover
+   wash) and should bleed vertically into the next section instead of being
+   hard clipped at the comp boundary — but must stay clipped horizontally so
+   it doesn't introduce a page-wide horizontal scrollbar */
+.de-comp--bleed{overflow-x:clip;overflow-y:visible}
+
+/* mobile sections use a viewport-relative unit matching the mock's 390px
+   mobile comp so copy/art keep the same proportions at any phone width */
+:root{--u:calc(min(100vw, 585px) / 390)}
+@media (max-height:520px) and (orientation:landscape){
+  :root{--u:calc(min(100vw, 450px) / 390)}
+}

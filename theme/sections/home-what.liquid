@@ -1,0 +1,90 @@
+{{ 'home-shared.css' | asset_url | stylesheet_tag }}
+{{ 'section-home-what.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'section-home-what.js' | asset_url }}" defer="defer"></script>
+
+{%- comment -%}
+  Pulled from the Variant F mock's "What is Delta Energy" section (#what / #mwhat).
+  Copy, pricing and images are still hard-coded from the mock and should be
+  wired up to real products/metafields in a follow-up pass.
+{%- endcomment -%}
+
+<div class="de-home-section__desktop">
+  <div class="de-comp">
+    <div class="de-comp__inner what-comp">
+      <section class="sec what-d-1" id="what" aria-label="What is Delta Energy">
+        <div class="eb fx-rise what-d-2" data-fx="reveal">What is Delta Energy?</div>
+        <h2 class="abs h65 lines fx-lines what-d-3" data-fx="reveal">
+          <span class="ln"><span class="what-d-4">Focus you</span></span><span class="ln"><span class="what-d-5">crave, energy</span></span><span class="ln"><span class="what-d-6">you need.</span></span>
+        </h2>
+        <p class="abs b18 fx-rise what-d-7" data-fx="reveal">Copy supporting what sets this product apart, getting deeper into the benefit—clean focus without the irritation. The plant helps shape this energy. 200mg caffeine. Lorem ipsum dolor sit amet, consectetur.</p>
+
+        <div class="pcard-wrap fx-rise what-d-8" data-fx="cards" data-card>
+          <div class="pcard">
+            <img class="bgimg" src="{{ 'card1_bg.webp' | asset_url }}" alt="" loading="lazy">
+            <div class="pshadow what-d-9"></div>
+            <div class="pcan what-d-10"><img src="{{ 'card1_can.webp' | asset_url }}" alt="Cherry Limeade can" loading="lazy"></div>
+            <a class="tag what-d-11" href="#shop" data-jump="shop" data-flavor-pick="cherry">Add <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15.5" fill="#C3DF80" stroke="#302952" stroke-opacity=".25"/><path d="M16 11.5v9M11.5 16h9" stroke="#302952" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+          </div>
+        </div>
+        <p class="abs t26 fx-rise what-d-12" data-fx="cards">Cherry Limeade Energy Drink</p>
+        <div class="abs price fx-rise what-d-13" data-fx="cards"><span>$24.99</span><span>/</span><span>4-pack</span></div>
+
+        <div class="pcard-wrap fx-rise what-d-14" data-fx="cards" data-card>
+          <div class="pcard">
+            <img class="bgimg" src="{{ 'card2_bg.webp' | asset_url }}" alt="" loading="lazy">
+            <div class="pshadow what-d-15"></div>
+            <div class="pcan alt what-d-16"><img src="{{ 'card2_can.webp' | asset_url }}" alt="Pineapple Mango can" loading="lazy"></div>
+            <a class="tag what-d-17" href="#shop" data-jump="shop" data-flavor-pick="pine">Add <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15.5" fill="#C3DF80" stroke="#302952" stroke-opacity=".25"/><path d="M16 11.5v9M11.5 16h9" stroke="#302952" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+          </div>
+        </div>
+        <p class="abs t26 fx-rise what-d-18" data-fx="cards">Pineapple Mango Energy Drink</p>
+        <div class="abs price fx-rise what-d-19" data-fx="cards"><span>$24.99</span><span>/</span><span>4-pack</span></div>
+
+        <div class="fruit fore what-d-20" data-px="0.16" aria-hidden="true"><div class="fb"><img src="{{ 's2_cherry.webp' | asset_url }}" alt="" loading="lazy"></div></div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<div class="de-home-section__mobile">
+  <section class="ms ms-what" id="mwhat" aria-label="What is Delta Energy">
+    <div class="mc">
+      <div class="meb fx-rise what-m-1" data-fx="reveal">What is Delta Energy?</div>
+      <h2 class="ma mh2 lines fx-lines what-m-2" data-fx="reveal">
+        <span class="ln"><span class="what-m-3">Focus you crave,</span></span><span class="ln"><span class="what-m-4">energy you need.</span></span>
+      </h2>
+      <p class="ma mb15 fx-rise what-m-5" data-fx="reveal">Copy supporting what sets this product apart, getting deeper into the benefit—clean focus without the irritation. The plant helps shape this energy. 200mg caffeine. Lorem ipsum dolor sit amet, consectetur.</p>
+
+      <div class="mcard fx-rise what-m-6" data-fx="cards">
+        <div class="mcard-in">
+          <img class="bgimg" src="{{ 'm_w_card1_bg.webp' | asset_url }}" alt="" loading="lazy">
+          <div class="pshadow what-m-7"></div>
+          <div class="pcan what-m-8"><img src="{{ 'm_w_card1_can.webp' | asset_url }}" alt="Cherry Limeade can" loading="lazy"></div>
+          <a class="mtag small what-m-9" href="#mshop" data-mjump="mshop" data-mpick="cherry" aria-label="Add Cherry Limeade">Add <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15.5" fill="#C3DF80" stroke="#302952" stroke-opacity=".25"/><path d="M16 11.5v9M11.5 16h9" stroke="#302952" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+        </div>
+      </div>
+      <p class="ma mname fx-rise what-m-10" data-fx="cards">Cherry Limeade<br>Energy Drink</p>
+      <div class="ma mprice fx-rise what-m-11" data-fx="cards"><span>$24.99</span><span>/</span><span>4-pack</span></div>
+
+      <div class="mcard fx-rise what-m-12" data-fx="cards">
+        <div class="mcard-in">
+          <img class="bgimg" src="{{ 'm_w_card2_bg.webp' | asset_url }}" alt="" loading="lazy">
+          <div class="pshadow what-m-13"></div>
+          <div class="pcan alt what-m-14"><img src="{{ 'm_w_card2_can.webp' | asset_url }}" alt="Pineapple Mango can" loading="lazy"></div>
+          <a class="mtag small what-m-15" href="#mshop" data-mjump="mshop" data-mpick="pine" aria-label="Add Pineapple Mango">Add <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15.5" fill="#C3DF80" stroke="#302952" stroke-opacity=".25"/><path d="M16 11.5v9M11.5 16h9" stroke="#302952" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+        </div>
+      </div>
+      <p class="ma mname fx-rise what-m-16" data-fx="cards">Pineapple Mango<br>Energy Drink</p>
+      <div class="ma mprice fx-rise what-m-17" data-fx="cards"><span>$24.99</span><span>/</span><span>4-pack</span></div>
+
+      <div class="fruit fore what-m-18" data-mpx="0.12" aria-hidden="true"><div class="fb"><img src="{{ 'm_w_cherry.webp' | asset_url }}" alt="" loading="lazy"></div></div>
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "Home — What is Delta",
+  "settings": []
+}
+{% endschema %}
